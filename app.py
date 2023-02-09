@@ -2,9 +2,10 @@ import os
 import requests
 
 from flask import Flask, abort
+from flask_cors import CORS
 
 application = Flask(__name__)
-
+CORS(application)
 
 @application.route('/')
 def hello_world():
